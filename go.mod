@@ -1,3 +1,3 @@
-module github.com/kozl/netology-devops
+module github.com/dmitriy-tomin/netology-devops-cicd
 
 go 1.17
