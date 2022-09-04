@@ -54,7 +54,7 @@ Vagrant.configure("2") do |config|
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-    vb.memory = "4072"
+    vb.memory = "6072"
   end
   #
   # View the documentation for the provider you are using for more
@@ -80,6 +80,7 @@ Vagrant.configure("2") do |config|
     apt-get -y -o Acquire::https::Verify-Peer=false install jenkins
     # jenkins user should be able to use docker
     usermod -a -G docker jenkins
+    usermod -a -G docker vagrant
     systemctl restart jenkins
     # pull nexus image in advance
     docker pull sonatype/nexus3
